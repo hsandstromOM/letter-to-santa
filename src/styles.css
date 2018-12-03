@@ -28,6 +28,11 @@ body {
   background-size: cover;
 }
 
+.modal-header, .modal-footer {
+  border-bottom: none !important;
+  border-top: none !important;
+}
+
 .modal-content {
   background-image: url('/assets/bg-1.png');
   background-position: center;
@@ -87,7 +92,7 @@ i {
             transform: scale(1.1)
 }
 
-span {
+span.share {
     position: absolute;
     z-index: 99;
     width: 240px;

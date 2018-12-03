@@ -3,7 +3,6 @@
   <div class="modal-dialog modal-lg" role="image">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -12,7 +11,17 @@
         <div id="modal-result"></div>
       </div>
       <div class="modal-footer">
-        <a onclick="dlImage()" >Download</a>
+        <div class="btn_wrap">
+          <span class="share">Share</span>
+             <div class="container">
+                <i onclick="shareFB()" class="fab fa-facebook-f"></i>
+                 <a
+       href="https://twitter.com/intent/tweet?text=I%20just%20wrote%20a%20Letter%20to%20Santa"
+       data-size="large">
+       <i  class="fab fa-twitter"></i></a>
+       <a onclick="dlImage()" ><i class="fas fa-file-download"></i></a>
+             </div>
+         </div>
       </div>
     </div>
   </div>
@@ -28,19 +37,6 @@
   <div class="d-flex">
 
   <button onclick="generateLetter()" class="btn_wrap" data-toggle="modal" data-target="#exampleModal">Generate My Letter To Santa</button>
-
-   <div class="btn_wrap">
-     <span>Share</span>
-        <div class="container">
-           <i onclick="shareFB()" class="fab fa-facebook-f"></i>
-            <a
-  href="https://twitter.com/intent/tweet?text=I%20just%20wrote%20a%20Letter%20to%20Santa"
-  data-size="large">
-  <i  class="fab fa-twitter"></i></a>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-github"></i>
-        </div>
-    </div>
   </div>
   <div class="outer">
   <div class="inner">
