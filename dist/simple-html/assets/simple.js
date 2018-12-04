@@ -1,9 +1,23 @@
 function generateLetter() {
 
+  $("#result").outerHeight($(window).height() - $("#result").offset().top - Math.abs($("#result").outerHeight(true) - $("#result").outerHeight()));
+
+  $(window).on("resize", function() {
+    $("#result").outerHeight($(window).height() - $("#result").offset().top - Math.abs($("#result").outerHeight(true) - $("#result").outerHeight()));
+  });
+
   // This is the starting story
   // var story = "Dear Santa, please bring me two VERB PLURAL_NOUN.";
 
-  var story = "Dear Santa, Wow has it been a year already? Time flies! How have you been? How are ONE and TWO? I know that LivePD North Pole episode must have been stressful, but I know the courts will find THREE innocent. Santa, I feel you may have received some bad intel on your FOUR last December so I wanted to share a few of my triumphs from this year that I know will make me a shoe-in for your FIVE list. Besides volunteering my time as a SIX, I frequently gave SEVEN to that EIGHT on the corner near my office. Everyday I set a goal to be the best NINE I could be ('A' for effort, amirite?).  I am SO proud that I only TEN'ed twice this year and my heart goes out to folks like [firstName lastName of a celebrity, politcal figure, or OMie]ELEVEN who could not stop TWELVE'ing. I hope my example inspires them to try harder next year! Now that you can see what a good FOUR I've been, I have but one small item on my wishlist: a THIRTEEN. Santa, I feel blessed. I have so much ___ in my life, but let's face it: 2018 has been a year (#fakeFOUTEEN) and this one little FIFTEEN will bring so much to joy to not only me, but my beloved teammates at SIXTEEN as well. In the words of DJ Khaled, 'I appreciate you.' More than ever, we need a SEVENTEEN'ing hero like you to deliver EIGHTEEN all over the world. On December 24th when I get home from the late volunteer shift at the NINETEEN, I'll be sure to leave out a plate of your favorite TWENTY's. Warmest regards, Your TWENTYONE, TWENTYTWO"
+  var story = "Dear Santa, Wow has it been a year already? Time flies! How have you been? How are ONE and TWO? I know that LivePD North Pole episode must have been stressful, but I know the courts will find THREE innocent. Santa, I feel you may have received some bad intel on your FOUR last December so I wanted to share a few of my triumphs from this year that I know will make me a shoe-in for your FIVE list. Besides volunteering my time as a SIX, I frequently gave SEVEN to that EIGHT on the corner near my office. Everyday I set a goal to be the best NINE I could be ('A' for effort, amirite?).  I am SO proud that I only TEN'ed twice this year and my heart goes out to folks like [firstName lastName of a celebrity, politcal figure, or OMie]ELEVEN who could not stop TWELVE'ing. I hope my example inspires them to try harder next year! Now that you can see what a good FOUR I've been, I have but one small item on my wishlist: a THIRTEEN. Santa, I feel blessed. I have so much FOURTEEN in my life, but let's face it: 2018 has been a year (#fakeFIFTEEN) and this one little SIXTEEN will bring so much to joy to not only me, but my beloved teammates at SEVENTEEN as well. In the words of DJ Khaled, 'I appreciate you.' More than ever, we need a EIGHTEEN'ing hero like you to deliver NINETEEN all over the world. On December 24th when I get home from the late volunteer shift at the TWENTY, I'll be sure to leave out a plate of your favorite TWENTYONE's. Warmest regards, Your TWENTYTWO, TWENTYTHREE";
+  //
+  // var story = '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">' +
+  //                  '<foreignObject width="100%" height="100%">' +
+  //                    '<div xmlns="http://www.w3.org/1999/xhtml" style="font-size:40px">' +
+  //                      '<em>I</em> like <span style="color:white; text-shadow:0 0 2px blue;">cheese</span>' +
+  //                    '</div>' +
+  //                  '</foreignObject>' +
+  //                '</svg>';
 
 
   var inputValue = $("#ONE").val();
@@ -90,12 +104,14 @@ function generateLetter() {
 }
 
 function dlImage() {
-  domtoimage.toJpeg(document.getElementById('result'), { quality: 0.95 })
-    .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'letter-to-santa.jpeg';
-        link.href = dataUrl;
-        link.click();
+  domtoimage.toJpeg(document.getElementById('result'), {
+      quality: 0.95
+    })
+    .then(function(dataUrl) {
+      var link = document.createElement('a');
+      link.download = 'letter-to-santa.jpeg';
+      link.href = dataUrl;
+      link.click();
     });
 }
 
