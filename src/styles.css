@@ -1,7 +1,8 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "lightbox2/dist/css/lightbox.min.css";
+@import url("https://use.typekit.net/opp8cca.css");
 
-body {
+/* body {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   color: #FFF;
@@ -10,7 +11,88 @@ body {
 
 h1, h2, h3, h4, button {
   font-family: 'Mountains of Christmas', cursive;
+} */
+
+body {
 }
+
+.letter {
+  font-family: "futura-pt","Trebuchet MS",Arial,sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: normal;
+  color: #69422f;
+  position: relative;
+  width: 700px;
+  min-height: 900px;
+  margin: 3rem auto;
+  padding: 3rem 5rem;
+  background: url("/assets/OM-white-paper_bg.jpg") repeat center top;
+  background-size: 64px;
+}
+.letterHeading {
+  position: relative;
+  width: 380px;
+  margin: 0 auto 5rem;
+}
+.letterHeading:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 100px;
+  border-bottom: 2px solid #69422f;
+}
+.letterHeading:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 100px;
+  border-bottom: 2px solid #69422f;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin-bottom: 1em;
+}
+h2 {
+  font-family: "futura-pt","Trebuchet MS",Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #69422f;
+}
+h3 {
+  margin-bottom: .5em;
+  font-family: "Sarina","Georgia",serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: normal;
+  /* font-style: italic; */
+  color: #69422f;
+}
+
+.letterDate {
+  margin-bottom: 3rem;
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.letterSignature {
+  display: inline-block;
+  font-family: "Sarina","Georgia",serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #49538f;
+  font-weight: normal;
+  transform: rotate(-6deg);
+  margin-left: -10px;
+}
+
 
 main {
   height: 100%;
