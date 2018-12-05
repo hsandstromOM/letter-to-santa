@@ -1,151 +1,160 @@
+var allInputs = $( ":input" );
+var formChildren = $( "form > *" );
+$( "#messages" ).text( "Found " + allInputs.length + " inputs and the form has " +
+  formChildren.length + " children." );
+
+$( "form" ).submit(function( event ) {
+  event.preventDefault();
+});
+
 function generateLetter() {
 
-  // $("#canvas").outerHeight($(window).height() - $("#canvas").offset().top - Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
-  //
-  // $(window).on("resize", function() {
-  //   $("#canvas").outerHeight($(window).height() - $("#canvas").offset().top - Math.abs($("#canvas").outerHeight(true) - $("#canvas").outerHeight()));
-  // });
+  var badwords = new Array("fuck", "shit", "ass", "dick", "asshole");
 
-  // This is the starting story
+  // if($.inArray(name, badwords) !==-1 || $.inArray(email, badwords) !==-1 || $.inArray(subject, badwords) !==-1 || $.inArray(message, badwords) !==-1) {
+  //      alert("Your inputs contain Bad Words, Please Remove Them Before Proceeding");
+  //                  return false;
+  //    }
+  // var check_text = document.getElementById("ONE").value;
+  // var error = 0;
+  // for (var i = 0; i < bad_words.length; i++) {
+  //   var val = bad_words[i];
+  //   if ((check_text.toLowerCase()).indexOf(val.toString()) > -1) {
+  //     error = error + 1;
+  //   }
+  // }
 
-  // var story = "Dear Santa, Wow has it been a year already? Time flies! How have you been? How are ONE and TWO? I know that LivePD North Pole episode must have been stressful, but I know the courts will find THREE innocent. Santa, I feel you may have received some bad intel on your FOUR last December so I wanted to share a few of my triumphs from this year that I know will make me a shoe-in for your FIVE list. Besides volunteering my time as a SIX, I frequently gave SEVEN to that EIGHT on the corner near my office. Everyday I set a goal to be the best NINE I could be ('A' for effort, amirite?).  I am SO proud that I only TEN'ed twice this year and my heart goes out to folks like [firstName lastName of a celebrity, politcal figure, or OMie]ELEVEN who could not stop TWELVE'ing. I hope my example inspires them to try harder next year! Now that you can see what a good FOUR I've been, I have but one small item on my wishlist: a THIRTEEN. Santa, I feel blessed. I have so much FOURTEEN in my life, but let's face it: 2018 has been a year (#fakeFIFTEEN) and this one little SIXTEEN will bring so much to joy to not only me, but my beloved teammates at SEVENTEEN as well. In the words of DJ Khaled, 'I appreciate you.' More than ever, we need a EIGHTEEN'ing hero like you to deliver NINETEEN all over the world. On December 24th when I get home from the late volunteer shift at the TWENTY, I'll be sure to leave out a plate of your favorite TWENTYONE's. Warmest regards, Your TWENTYTWO, TWENTYTHREE";
+var text = $("input:text[id='ONE']").val();
 
-  var story =
-    '<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" class="svg-content">' +
-    '<foreignObject width="500px" height="100%">' +
-    '<div xmlns="http://www.w3.org/1999/xhtml">' +
-    "<h3>Dear Santa,</h3>" +
-    "<p>How have you been? How are ONE and TWO?</p>" +
-    "<p>I know that LivePD North Pole episode must have been stressful, but I know the courts will find THREE innocent.</p>" +
-    "<p>Santa, I feel you may have received some bad intel on your FOUR last December so I wanted to share a few of my triumphs from this year that I know will make me a shoe-in for your FIVE list.</p>" +
-    '<p>Besides volunteering my time as a SIX, I frequently gave SEVEN to that EIGHT on the corner near my office. Everyday I set a goal to be the best NINE I could be ("A" for effort, amirite?). </p>' +
-    "<p>I am SO proud that I only TEN'ed twice this year and my heart goes out to folks like [firstName lastName of a celebrity, politcal figure, or OMie]ELEVEN who could not stop TWELVE'ing.</p> " +
-    "<p>I hope my example inspires them to try harder next year! Now that you can see what a good FOUR I've been, I have but one small item on my wishlist: a THIRTEEN.</p>" +
-    "<p> Santa, I feel blessed. I have so much FOURTEEN in my life, but let's face it: 2018 has been a year (#fakeFIFTEEN) and this one little SIXTEEN will bring so much to joy to not only me, but my beloved teammates at SEVENTEEN as well.</p>" +
-    "<p>In the words of DJ Khaled, 'I appreciate you.' More than ever, we need a EIGHTEEN'ing hero like you to deliver NINETEEN all over the world. On December 24th when I get home from the late volunteer shift at the TWENTY, I'll be sure to leave out a plate of your favorite TWENTYONE's.</p>" +
-    "<p>Warmest regards,</p>" +
-    "<p>Your TWENTYTWO, TWENTYTHREE</p>" +
-    '</div>' +
-    '</foreignObject>' +
-    '</svg>';
+if($.inArray(text, badwords) !==-1 ) {
+    $('#myModal').modal('show');
+  } else {
 
+    // This is the starting story
 
-  var inputValue = $("#ONE").val();
-  story = story.replace("ONE", inputValue);
+    var story = "Dear Santa, Wow has it been a year already? Time flies! How have you been? How are ONE and TWO? I know that LivePD North Pole episode must have been stressful, but I know the courts will find THREE innocent. Santa, I feel you may have received some bad intel on your FOUR last December so I wanted to share a few of my triumphs from this year that I know will make me a shoe-in for your FIVE list. Besides volunteering my time as a SIX, I frequently gave SEVEN to that EIGHT on the corner near my office. Everyday I set a goal to be the best NINE I could be ('A' for effort, amirite?).  I am SO proud that I only TEN'ed twice this year and my heart goes out to folks like [firstName lastName of a celebrity, politcal figure, or OMie]ELEVEN who could not stop TWELVE'ing. I hope my example inspires them to try harder next year! Now that you can see what a good FOUR I've been, I have but one small item on my wishlist: a THIRTEEN. Santa, I feel blessed. I have so much FOURTEEN in my life, but let's face it: 2018 has been a year (#fakeFIFTEEN) and this one little SIXTEEN will bring so much to joy to not only me, but my beloved teammates at SEVENTEEN as well. In the words of DJ Khaled, 'I appreciate you.' More than ever, we need a EIGHTEEN'ing hero like you to deliver NINETEEN all over the world. On December 24th when I get home from the late volunteer shift at the TWENTY, I'll be sure to leave out a plate of your favorite TWENTYONE's. Warmest regards, Your TWENTYTWO, TWENTYTHREE";
 
-  inputValue = $("#TWO").val();
-  story = story.replace("TWO", inputValue);
+    var inputValue = $("#ONE").val();
+    story = story.replace("ONE", inputValue);
 
-  inputValue = $("#THREE").val();
-  story = story.replace("THREE", inputValue);
+    inputValue = $("#TWO").val();
+    story = story.replace("TWO", inputValue);
 
-  inputValue = $("#FOUR").val();
-  story = story.replace("FOUR", inputValue);
+    inputValue = $("#THREE").val();
+    story = story.replace("THREE", inputValue);
 
-  inputValue = $("#FIVE").val();
-  story = story.replace("FIVE", inputValue);
+    inputValue = $("#FOUR").val();
+    story = story.replace("FOUR", inputValue);
 
-  inputValue = $("#SIX").val();
-  story = story.replace("SIX", inputValue);
+    inputValue = $("#FIVE").val();
+    story = story.replace("FIVE", inputValue);
 
-  inputValue = $("#SEVEN").val();
-  story = story.replace("SEVEN", inputValue);
+    inputValue = $("#SIX").val();
+    story = story.replace("SIX", inputValue);
 
-  inputValue = $("#EIGHT").val();
-  story = story.replace("EIGHT", inputValue);
+    inputValue = $("#SEVEN").val();
+    story = story.replace("SEVEN", inputValue);
 
-  inputValue = $("#NINE").val();
-  story = story.replace("NINE", inputValue);
+    inputValue = $("#EIGHT").val();
+    story = story.replace("EIGHT", inputValue);
 
-  inputValue = $("#TEN").val();
-  story = story.replace("TEN", inputValue);
+    inputValue = $("#NINE").val();
+    story = story.replace("NINE", inputValue);
 
-  inputValue = $("#ELEVEN").val();
-  story = story.replace("ELEVEN", inputValue);
+    inputValue = $("#TEN").val();
+    story = story.replace("TEN", inputValue);
 
-  inputValue = $("#TWELVE").val();
-  story = story.replace("TWELVE", inputValue);
+    inputValue = $("#ELEVEN").val();
+    story = story.replace("ELEVEN", inputValue);
 
-  inputValue = $("#THIRTEEN").val();
-  story = story.replace("THIRTEEN", inputValue);
+    inputValue = $("#TWELVE").val();
+    story = story.replace("TWELVE", inputValue);
 
-  inputValue = $("#FOURTEEN").val();
-  story = story.replace("FOURTEEN", inputValue);
+    inputValue = $("#THIRTEEN").val();
+    story = story.replace("THIRTEEN", inputValue);
 
-  inputValue = $("#FIFTEEN").val();
-  story = story.replace("FIFTEEN", inputValue);
+    inputValue = $("#FOURTEEN").val();
+    story = story.replace("FOURTEEN", inputValue);
 
-  inputValue = $("#SIXTEEN").val();
-  story = story.replace("SIXTEEN", inputValue);
+    inputValue = $("#FIFTEEN").val();
+    story = story.replace("FIFTEEN", inputValue);
 
-  inputValue = $("#SEVENTEEN").val();
-  story = story.replace("SEVENTEEN", inputValue);
+    inputValue = $("#SIXTEEN").val();
+    story = story.replace("SIXTEEN", inputValue);
 
-  inputValue = $("#EIGHTEEN").val();
-  story = story.replace("EIGHTEEN", inputValue);
+    inputValue = $("#SEVENTEEN").val();
+    story = story.replace("SEVENTEEN", inputValue);
 
-  inputValue = $("#NINETEEN").val();
-  story = story.replace("NINETEEN", inputValue);
+    inputValue = $("#EIGHTEEN").val();
+    story = story.replace("EIGHTEEN", inputValue);
 
-  inputValue = $("#TWENTYONE").val();
-  story = story.replace("TWENTYONE", inputValue);
+    inputValue = $("#NINETEEN").val();
+    story = story.replace("NINETEEN", inputValue);
 
-  inputValue = $("#TWENTYTWO").val();
-  story = story.replace("TWENTYTWO", inputValue);
+    inputValue = $("#TWENTYONE").val();
+    story = story.replace("TWENTYONE", inputValue);
 
-  inputValue = $("#TWENTYTHREE").val();
-  story = story.replace("TWENTYTHREE", inputValue);
+    inputValue = $("#TWENTYTWO").val();
+    story = story.replace("TWENTYTWO", inputValue);
+
+    inputValue = $("#TWENTYTHREE").val();
+    story = story.replace("TWENTYTHREE", inputValue);
 
 
-  // This writes the story when the user clicks the "Generate MadLib" button"
-  $("#result").text(story);
+    // This writes the story when the user clicks the "Generate MadLib" button"
+    $("#result").text(story);
 
-  var canvas = document.getElementById('canvas');
-  ctx = canvas.getContext('2d');
+    // var canvas = document.getElementById('canvas');
+    // ctx = canvas.getContext('2d');
+    //
+    // var DOMURL = window.URL || window.webkitURL || window;
+    //
+    // var img = new Image();
+    // var svg = new Blob([story], {
+    //   type: 'image/svg+xml;charset=utf-8'
+    // });
+    // var url = DOMURL.createObjectURL(svg);
+    //
+    // img.onload = function() {
+    //   ctx.drawImage(img, 0, 0);
+    //   DOMURL.revokeObjectURL(url);
+    // }
+    //
+    // img.src = url;
 
-  var DOMURL = window.URL || window.webkitURL || window;
+    var node = document.getElementById('result');
 
-  var img = new Image();
-  var svg = new Blob([story], {
-    type: 'image/svg+xml;charset=utf-8'
-  });
-  var url = DOMURL.createObjectURL(svg);
+    var el = document.getElementById('modal-result');
 
-  img.onload = function() {
-    ctx.drawImage(img, 0, 0);
-    DOMURL.revokeObjectURL(url);
+
+    domtoimage.toPng(node)
+      .then(function(dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+        el.appendChild(img);
+      })
+      .catch(function(error) {
+        console.error('oops, something went wrong!', error);
+      });
+
+    $('#exampleModal').modal('show');
+
+
   }
-
-  img.src = url;
-
-  var node = document.getElementById('result');
-
-  var el = document.getElementById('modal-result');
-
-  //
-  // domtoimage.toPng(node)
-  //   .then(function(dataUrl) {
-  //     var img = new Image();
-  //     img.src = dataUrl;
-  //     // document.body.appendChild(img);
-  //     // el.appendChild(img);
-  //   })
-  //   .catch(function(error) {
-  //     console.error('oops, something went wrong!', error);
-  //   });
 }
 
-// function dlImage() {
-//   domtoimage.toJpeg(document.getElementById('result'), {
-//       quality: 0.95
-//     })
-//     .then(function(dataUrl) {
-//       var link = document.createElement('a');
-//       link.download = 'letter-to-santa.jpeg';
-//       link.href = dataUrl;
-//       link.click();
-//     });
-// }
+function dlImage() {
+  domtoimage.toJpeg(document.getElementById('result'), {
+      quality: 0.95
+    })
+    .then(function(dataUrl) {
+      var link = document.createElement('a');
+      link.download = 'letter-to-santa.jpeg';
+      link.href = dataUrl;
+      link.click();
+    });
+}
 
 function shareFB() {
 
