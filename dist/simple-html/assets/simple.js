@@ -111,7 +111,14 @@ function shareOriginal() {
     },
     function(response) {
       // Action after response
+      console.log(response);
     });
 
   return false;
+}
+
+function copyLink() {
+  var Url = "https://obviouslee.com";
+document.execCommand("copy");
+  alert(Url + "Copied to clipboard!");
 }
