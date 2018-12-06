@@ -1,20 +1,6 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-@import "lightbox2/dist/css/lightbox.min.css";
 @import url("https://use.typekit.net/opp8cca.css");
 
-/* body {
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
-  color: #FFF;
-  background: url("http://craftedbygc.com/images/xmas-large.jpg") no-repeat 0 0/cover;
-}
-
-h1, h2, h3, h4, button {
-  font-family: 'Mountains of Christmas', cursive;
-} */
-
-body {
-}
 
 .letter {
   font-family: "futura-pt","Trebuchet MS",Arial,sans-serif;
@@ -23,9 +9,7 @@ body {
   font-weight: normal;
   color: #69422f;
   position: relative;
-  max-width: 700px;
-  /* min-height: 900px; */
-  margin: 3rem auto;
+  height:100%;
   padding: 3rem 2rem;
   background: url("/assets/OM-white-paper_bg.jpg") repeat center top;
   background-size: 64px;
@@ -70,8 +54,11 @@ h3 {
   font-size: 14px;
   line-height: 1.2;
   font-weight: normal;
-  /* font-style: italic; */
   color: #69422f;
+}
+
+p {
+  margin-top: .5em;
 }
 
 .letterDate {
@@ -100,31 +87,6 @@ main {
   position: relative;
 }
 
-/* canvas {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
-} */
-
-/* svg {
-	display: inline-block;
-	position: relative;
-	width: 100%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
-} */
-
-/* .svg-content {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-} */
-
 #result {
   background-image: url('/assets/bg-1.png');
   background-position: center;
@@ -136,24 +98,6 @@ main {
 .modal-header, .modal-footer {
   border-bottom: none !important;
   border-top: none !important;
-}
-
-.modal-content {
-  background-image: url('/assets/bg-1.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#modal-result {
-  position: relative;
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-#modal-result img {
-  max-width: 100%;
-  height: auto;
 }
 
 .outer {
@@ -279,8 +223,4 @@ span.share {
   bottom: 16px;
   right: 16px;
   width: 100px;
-}
-
-#img-result {
-  visibilty: hidden;
 }
