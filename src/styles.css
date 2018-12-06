@@ -23,10 +23,10 @@ body {
   font-weight: normal;
   color: #69422f;
   position: relative;
-  width: 700px;
-  min-height: 900px;
+  max-width: 700px;
+  /* min-height: 900px; */
   margin: 3rem auto;
-  padding: 3rem 5rem;
+  padding: 3rem 2rem;
   background: url("/assets/OM-white-paper_bg.jpg") repeat center top;
   background-size: 64px;
 }

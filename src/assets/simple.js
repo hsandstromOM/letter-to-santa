@@ -7,22 +7,80 @@ $( "form" ).submit(function( event ) {
   event.preventDefault();
 });
 
+
+$(function() {
+
+  var d = new Date();
+  // document.getElementById("date").innerHTML = d.getFullYear();
+  var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  document.getElementById("date").innerHTML = months[d.getMonth()]+ " " + d.getDate() + ", " + d.getFullYear() ;
+
+  // hide the story from view
+  $("#story").hide();
+
+  // ---- event handler ---- //
+  $("#btn-click").click(function(e) {
+
+    e.preventDefault()
+
+    // grab the values from the input boxes, then append them to the DOM
+    $(".name").empty().append($("input.name").val());
+    $(".one").empty().append($("input.one").val());
+    $(".two").empty().append($("input.two").val());
+    $(".three").empty().append($("input.three").val());
+    $(".four").empty().append($("input.four").val());
+    $(".five").empty().append($("input.five").val());
+    $(".six").empty().append($("input.six").val());
+    $(".seven").empty().append($("input.seven").val());
+    $(".eight").empty().append($("input.eight").val());
+    $(".nine").empty().append($("input.nine").val());
+    $(".ten").empty().append($("input.ten").val());
+    $(".eleven").empty().append($("input.eleven").val());
+    $(".twelve").empty().append($("input.twelve").val());
+    $(".thirteen").empty().append($("input.thirteen").val());
+    $(".fourteen").empty().append($("input.fourteen").val());
+    $(".fifteen").empty().append($("input.fifteen").val());
+    $(".sixteen").empty().append($("input.sixteen").val());
+    $(".seventeen").empty().append($("input.seventeen").val());
+    $(".eighteen").empty().append($("input.eighteen").val());
+    $(".nineteen").empty().append($("input.nineteen").val());
+    $(".twenty").empty().append($("input.twenty").val());
+    $(".twentyone").empty().append($("input.twentyone").val());
+
+
+
+    $(".person").empty().append($("input.person").val());
+    $(".adjective").empty().append($("input.adjective").val());
+    $(".noun").empty().append($("input.noun").val());
+    $(".insect").empty().append($("input.insect").val());
+    $(".noun2").empty().append($("input.plural-noun").val());
+    $(".verb").empty().append($("input.verb").val());
+
+    // show the story
+    $("#story").show();
+
+      $('#exampleModal').modal('show');
+
+    // empty the form's values
+    $(':input').val('');
+
+    // hide the questions
+    $("#questions").hide();
+
+  });
+
+  // ---- event handler ---- //
+  $("#play-btn").click(function(e) {
+    $("#questions").show();
+    $("#story").hide();
+      $('#exampleModal').modal('hide');
+  });
+
+});
+
 function generateLetter() {
 
-  var badwords = new Array("fuck", "shit", "ass", "dick", "asshole");
-
-  // if($.inArray(name, badwords) !==-1 || $.inArray(email, badwords) !==-1 || $.inArray(subject, badwords) !==-1 || $.inArray(message, badwords) !==-1) {
-  //      alert("Your inputs contain Bad Words, Please Remove Them Before Proceeding");
-  //                  return false;
-  //    }
-  // var check_text = document.getElementById("ONE").value;
-  // var error = 0;
-  // for (var i = 0; i < bad_words.length; i++) {
-  //   var val = bad_words[i];
-  //   if ((check_text.toLowerCase()).indexOf(val.toString()) > -1) {
-  //     error = error + 1;
-  //   }
-  // }
+var badwords = new Array("fuck", "shit", "ass", "dick", "asshole");
 
 var text = $("input:text[id='ONE']").val();
 
