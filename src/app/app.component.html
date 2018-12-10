@@ -144,6 +144,28 @@
           </div>
         </div>
         <hr>
+        <style>
+      canvas {
+          border: 1px solid black;
+      }
+      button {
+          clear: both;
+          display: block;
+      }
+      #content {
+          background: rgba(100, 255, 255, 0.5);
+          padding: 50px 10px;
+      }
+  </style>
+  <div><h1>HTML content to render:</h1>
+    <div id="content">Render the content in this element <strong>only</strong> onto the existing canvas element</div>
+</div>
+<!-- <h1>Existing canvas:</h1>
+<canvas width="500" height="200"></canvas>
+<button id="html2-btn">Run html2canvas</button> -->
+<canvas id="canvas" width="200" height="200"></canvas>
+ <img id="someImage"/>
+ <button id="link">Link to image</button>
       </div>
     </div>
   </div>
