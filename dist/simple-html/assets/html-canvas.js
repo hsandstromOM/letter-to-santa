@@ -12,6 +12,7 @@ $(function() {
          scale: 2
        }).then(function(canvas) {
         // var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
+        var g = document.write('<iframe name="contentwin" src="' + canvas.toDataURL() + '" scrolling="yes" frameborder="0" height="100%" width="100%"></iframe>');
         var a = document.createElement('a');
          document.body.appendChild(a);
          a.href = canvas.toDataURL("image/png");
@@ -25,7 +26,8 @@ $(function() {
        html2canvas($('#story')[0], {
          scale: 1.5
        }).then(function(canvas) {
-        var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
+        // var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
+        var g = document.write('<iframe name="contentwin" src="' + canvas.toDataURL() + '" scrolling="yes" frameborder="0" height="100%" width="100%"></iframe>');
         var a = document.createElement('a');
          document.body.appendChild(a);
          a.href = canvas.toDataURL("image/png");
