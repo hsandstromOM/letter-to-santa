@@ -6,19 +6,34 @@ $(function() {
       }
     });
   });
-
-  $('#save').click(function() {
-     html2canvas($('#story')[0], {
-       scale: 1.5
-     }).then(function(canvas) {
-      var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
-      var a = document.createElement('a');
-       document.body.appendChild(a);
-       a.href = canvas.toDataURL("image/png");
-       a.download = 'letter-to-santa.png';
-       // a.click();
+  if ( $(window).width() > 739) {
+    $('#save').click(function() {
+       html2canvas($('#story')[0], {
+         scale: 2
+       }).then(function(canvas) {
+        // var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
+        var a = document.createElement('a');
+         document.body.appendChild(a);
+         a.href = canvas.toDataURL("image/png");
+         a.download = 'letter-to-santa.png';
+         a.click();
+       });
      });
-   });
+  }
+  else {
+    $('#save').click(function() {
+       html2canvas($('#story')[0], {
+         scale: 1.5
+       }).then(function(canvas) {
+        var g = document.write('<img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" />');
+        var a = document.createElement('a');
+         document.body.appendChild(a);
+         a.href = canvas.toDataURL("image/png");
+         a.download = 'letter-to-santa.png';
+         a.click();
+       });
+     });
+  }
 
   function saveAs(uri, filename) {
     var link = document.createElement('a');
