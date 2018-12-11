@@ -20,17 +20,17 @@ $(function() {
   //       });
   //     });
 
-
-      var ctx = document.getElementById("canvas").getContext("2d");
-      var image = document.getElementById("someImage");
-      ctx.fillRect(100,100,100,100);
-      image.src = canvas.toDataURL("image/png");
-      var link = document.getElementById("link");
-      link.addEventListener('click', function(){
-          // window.open(canvas.toDataURL("image/png"), '_blank');
-           var win = window.open();
-            win.document.write('<iframe src="' + canvas.toDataURL("image/png")  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-      });
+      //
+      // var ctx = document.getElementById("canvas").getContext("2d");
+      // var image = document.getElementById("someImage");
+      // ctx.fillRect(100,100,100,100);
+      // image.src = canvas.toDataURL("image/png");
+      // var link = document.getElementById("link");
+      // link.addEventListener('click', function(){
+      //     // window.open(canvas.toDataURL("image/png"), '_blank');
+      //      var win = window.open();
+      //       win.document.write('<iframe src="' + canvas.toDataURL("image/png")  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+      // });
 
   var d = new Date();
   var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];

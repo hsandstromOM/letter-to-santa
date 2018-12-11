@@ -30,9 +30,11 @@
               "node_modules/popper.js/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/dom-to-image/dist/dom-to-image.min.js",
-              "node_modules/html2canvas/dist/html2canvas.min.js",
+              "src/assets/html2canvasupdate.js",
+              "src/assets/canvas-two-image.js",
+              "src/assets/html-canvas.js",
               "src/assets/simple.js"
-            ]
+                       ]
           },
           "configurations": {
             "production": {
