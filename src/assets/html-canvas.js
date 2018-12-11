@@ -25,11 +25,11 @@ $(function() {
        html2canvas($('#story')[0], {
          scale: 1.5
        }).then(function(canvas) {
-        var g = document.write('<div style="container"> <img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" /></div>');
-        // var g = document.write('<iframe name="contentwin" src="' + canvas.toDataURL() + '" scrolling="yes" frameborder="0" height="100%" width="100%"></iframe>');
+        // var g = document.write('<div style="container"> <img style="width:100%; height:auto;" src="' + canvas.toDataURL() + '" /></div>');
+        var g = document.write('<iframe name="contentwin" src="' + canvas.toDataURL() + '" scrolling="yes" frameborder="0" height="100%" width="100%"></iframe>');
         var a = document.createElement('a');
          document.body.appendChild(a);
-         a.href = canvas.toDataURL("image/png") + 'target= "_blank"';
+         a.href = canvas.toDataURL("image/png");
          a.download = 'letter-to-santa.png';
          a.click();
        });
